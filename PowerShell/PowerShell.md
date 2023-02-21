@@ -10,5 +10,5 @@
     * [starship](https://starship.rs/) ``scoop install starship``
     * [Git](https://git-scm.com/) ``scoop install git``
     * Vim ``scoop install vim``
-* [posh-git](https://github.com/dahlbyk/posh-git)
+    * [posh-git](https://github.com/dahlbyk/posh-git) ``scoop install posh-git``
 * [PSReadLine](https://github.com/PowerShell/PSReadLine)
