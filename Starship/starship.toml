@@ -1,0 +1,84 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[character]
+#symbol = "❯"
+error_symbol = "[❌](bold red)"
+success_symbol = " 🎮👾"
+#success_symbol = "⛄🎄🎅 "
+#error_symbol = "☠"
+
+[package]
+disabled = true
+
+[username]
+style_user = "purple bold"
+style_root = "black bold"
+format = " 🐉 [Kobayashi]($style) 💻📎 "
+disabled = false
+show_always = true
+
+[git_branch]
+symbol = "🌱 "
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = "☠️"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+up_to_date = "🍕👌"
+untracked = "🤷"
+stashed = "📦"
+modified = "🍔🍟🥤 "
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "♻️"
+
+[nodejs]
+#format = "via [🟢 $version](bold green) "
+format = "via [🦾🤖 $version](bold green) "
+
+[java]
+symbol= "📱🍵 "
+
+[battery]
+disabled = false
+full_symbol = "🔌🔋"
+charging_symbol = "🔌⚡️"
+discharging_symbol = "💀🪫"
+
+[[battery.display]] # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]] # "bold yellow" style and 💦 symbol when capacity is between 10% and 30%
+threshold = 100
+style = "bold yellow"
+discharging_symbol = " 🍕 "
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+utc_time_offset = "-5"
+time_range = "10:00:00-14:00:00"
+
+[azure]
+disabled = false
+format = "on [$symbol($subscription)]($style) "
+symbol = "🛸 "
